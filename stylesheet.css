@@ -31,12 +31,6 @@ body {
     height: 60px;
 }
 
-.menu-icon {
-    display: none;
-    float: right;
-    color: #fff;
-}
-
 .header-list {
     /* float: left; */
     /* padding-left: 350px; */
@@ -85,6 +79,10 @@ body {
     opacity: 1;
 }
 
+.menu-icon {
+  display: none;
+}
+
 /* .akun {
     background-color: #83D987;
     padding: 15px 40px;
@@ -97,6 +95,14 @@ body {
 
 .title {
     margin-top: 120px;
+    opacity: 0;
+    transform: translate(-50px, 0);
+}
+
+.title.title-landing {
+    opacity: 1;
+    transform: translate(0,0);
+    transition: 2s;
 }
 
 .title h1 {
@@ -150,7 +156,7 @@ body {
     line-height: 70px;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 670px) {
     .header-list {
         display: none;
     }
@@ -162,6 +168,8 @@ body {
 
     .menu-icon {
         display: block;
+        float: right;
+        color: #fff;
     }
 
     .title {
@@ -200,88 +208,74 @@ body {
         border-radius: 0;
     }
 
+    /* .wrapper {
+      display: flex;
+      flex-direction: column;
+    } */
+
+    .one {
+      display: none;
+    }
+
 }
 
 
-.wrapper{
-max-width: 1440px;
-height: 946px;
-background: #E5E5E5;
-line-height: 30px;
+.wrapper  {
+    max-width: 100%;
+    height: 946px;
+    background: #E5E5E5;
+    /* line-height: 30px; */
+    padding: 100px;
 }
 
-.wrapper-right{
-font-size: 20px;
-float: right;
-width: 396px;
-height: 454px;
-margin-right: 180px;
-margin-top: 155px;
+.wrapper-right  {
+    font-size: 20px;
+    float: right;
+    width: 50%;
+    height: 454px;
+    /* margin-right: 180px; */
+    /* margin-top: 155px; */
 }
 
-.wrapper-left{
-float: left;
-margin-left: 230px;
-margin-top: 100px;
+.wrapper-left {
+    float: left;
+    /* margin-left: 230px;
+    margin-top: 100px; */
+    width: 50%;
 }
 
 .one {
-  width: 420px;
-  height: 550px;
-  border-radius: 20px;
-}
-.tool-tip {
-  width: 316px;
-  height: 100px;
-  background-color: #fff;
-  position: absolute;
-  top: 29px;
-  right: 25px;
-  border-radius: 7px;
-  padding: 23px 22px 35px 22px;
+    max-width: 420px;
+    height: 550px;
+    border-radius: 25px;
+    /* margin-top: 100px; */
 }
 
 
-.price{
-font-size: 20px;
-display: flex;
-width: 877px;
-height: 96px;
-margin-top:800px;
-margin-bottom: 50px;
-margin: 0 auto;
+.price {
+    font-size: 20px;
+    display: flex;
+    width: 877px;
+    height: 96px;
+    margin-top:800px;
+    margin-bottom: 50px;
+    margin: 0 auto;
 }
 
 .type_ {
-  flex: auto;
-  padding: 10px 10px;
-  text-align: center;
-  line-height: 30px;
-}
-.border-t {
-  border-right: 1px solid #bac0ca;
-}
-.type_ .count {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 36px;
-  line-height: 54px;
-}
-.type_ .name {
-  color: #8a8c97;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 20px;
-  line-height: 30px;
+    flex: auto;
+    padding: 10px 10px;
+    text-align: center;
+    line-height: 30px;
 }
 
-*,
+/* *,
 *::before,
 *::after {
   box-sizing: border-box;
   margin: 0;
   font-family: "Poppins", sans-serif;
-}
+} */
 img {
   width: 100%;
   height: auto;
@@ -435,19 +429,27 @@ img {
   #body-2 > .best-top > .flex-auto > a.recomendation {
     font-size: 12px;
   }
-    .price{
+
+  .best-top {
+    text-align: center;
+  }
+
+  .price  {
     width:100%;
     flex-direction:column;
     text-align: center;
   }
-  .wrapper{
-  width:100%;
-  flex-direction:column;
+  .wrapper  {
+    width:100%;
+    display: flex;
+    flex-direction:column;
+    padding: 0%;
   }
+
   .wrapper-right{
     font-size:15px;
-    width:25%;
-    line-height:20px;
+    width:100%;
+    line-height:40px;
   }
 }
 @media (max-width: 425px) {
@@ -471,18 +473,18 @@ img {
     }
   .wrapper-right{
     font-size:15px;
-    width:25%;
+    width:100%;
     line-height:20px;
   }
 }
 
 footer{
-    bottom: 0;
+    /* bottom: 0;
     left: 0;
-    right: 0;
+    right: 0; */
     background: #111;
     height: auto;
-    width: 100vw;
+    width: 100%;
     font-family: "Open Sans";
     padding-top: 40px;
     color: #fff;
@@ -493,6 +495,7 @@ footer{
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    width: 100%;
 }
 .footer-content h3{
     font-size: 1.8rem;
@@ -531,7 +534,7 @@ footer{
 
 .footer-bottom{
     background: #000;
-    width: 100vw;
+    width: 100%;
     padding: 20px 0;
     text-align: center;
 }
